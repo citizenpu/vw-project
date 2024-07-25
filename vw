@@ -23,7 +23,7 @@ For I = ws_start To ws_count
             Selection.Copy
     
             Cells.Select
-            Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _:=False, Transpose:=False
+            Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks:=False, Transpose:=False
     End If
         
 Next I
