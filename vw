@@ -1,4 +1,4 @@
-#step 1.this macro is a revision of Jun's original code enabling automatic deletion of sheets that have 'na" while keeping the others 
+#step 1.this macro is built upon Jun's original code, enabling automatic deletion of sheets that have 'na" while keeping the others 
 Sub MacroNA()
 Dim ws_count As Integer
 Dim I As Integer
