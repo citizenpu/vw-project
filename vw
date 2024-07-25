@@ -43,7 +43,7 @@ For Each ws In Activeworkbook.Worksheets
 Next ws
 End Sub
 .......................................................................................................................
-# step 4 this macro is used to write the unmatched sheet to the current worbook
+# step 4 this macro is used to write the unmatched sheet from the workbook in the previous year to the current workbook
 sub Macroconnect()
 For Each cel in Workbooks("2023_LabourWageLandUse.xlsx").Worksheets("Index").range("B:B").Cells
     If iserror(Application.match(cel.value,Workbooks("2024_LabourWageLandUse.xlsx").Worksheets("Index").range("B:B").Cells,0)) then
