@@ -1,5 +1,4 @@
 #step 1.this macro is a revision of Jun's original code enabling automatic deletion of sheets that have 'na" while keeping the others 
-
 Sub MacroNA()
 Dim ws_count As Integer
 Dim I As Integer
@@ -43,3 +42,12 @@ For Each ws In Activeworkbook.Worksheets
      x = x + 1
 Next ws
 End Sub
+.......................................................................................................................
+# step 4 this macro is used to write the unmatched sheet to the current worbook
+sub Macroconnect()
+For Each cel in Workbooks("2023_LabourWageLandUse.xlsx").Worksheets("Index").range("B:B").Cells
+    If iserror(Application.match(cel.value,Workbooks("2024_LabourWageLandUse.xlsx").Worksheets("Index").range("B:B").Cells,0)) then
+    Workbooks("2023_LabourWageLandUse.xlsx").Worksheets(cel.value).copy After:=Workbooks("2024_LabourWageLandUse.xlsx").Worksheets(Workbooks("2024_LabourWageLandUse.xlsx").Worksheets.count)
+    end if
+next cel
+End sub   
